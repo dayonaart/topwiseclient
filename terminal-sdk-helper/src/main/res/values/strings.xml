@@ -1,0 +1,6 @@
+<resources>
+    <string name="title_activity_program_pemerintah">ProgramPemerintahActivity</string>
+    <string name="title_activity_check_balance">CheckBalanceActivity</string>
+    <string name="title_activity_tarik_tunai">TarikTunaiActivity</string>
+    <string name="sdk_version_is_not_compatible">SDK Version is not Compatible!!!</string>
+</resources>

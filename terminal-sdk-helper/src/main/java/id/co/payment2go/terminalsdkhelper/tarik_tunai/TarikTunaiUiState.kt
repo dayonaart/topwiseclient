@@ -1,0 +1,36 @@
+package id.co.payment2go.terminalsdkhelper.tarik_tunai
+
+import id.co.payment2go.terminalsdkhelper.payment_service.webservice.dto.CheckedBin
+
+data class TarikTunaiUiState(
+    val transactionId: String = "",
+    val fld3: String = "",
+    val fld48: String = "",
+    val fld43: String = "",
+    val fld4: String = "",
+    val cardNumber: String = "",
+    val maskedCardNumber: String = "",
+    val isCardInserted: Boolean = false,
+    var isErrorPopUpShowing: Boolean = false,
+    val popUpMessage: String = "",
+    val isLoading: Boolean = false,
+    val loadingMessage: String = "",
+    val checkedBin: CheckedBin = CheckedBin(),
+    val pins: List<Char> = listOf(),
+    val stan: Long = 1,
+    val posent: String = "",
+    val poscon: String = "",
+    val track2Data: String = "",
+    val pinBlock: String = "",
+    val emvData: String = "",
+    val originEmv: String = "",
+    val mustOffUs: Boolean = false,
+    val biayaLoket: String = "",
+    val trxTypeId: String = "",
+    val refNum: String = "",
+    val narasi: String = "",
+    val binName: String = "",
+    val NII: String = "",
+    val IsOnUs: Boolean = true,
+    val cardType: String = "",
+)

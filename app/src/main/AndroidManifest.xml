@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <queries>
+        <package android:name="com.example.hostgst" />
+    </queries>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClientBni"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="id.co.payment2go.terminalsdkhelper.payments.debit_card.ui.DebitActivity"
+            android:exported="true" />
+        <activity
+            android:name="id.co.payment2go.terminalsdkhelper.program_pemerintah.ui.ProgramPemerintahActivity"
+            android:exported="true" />
+        <activity
+            android:name="id.co.payment2go.terminalsdkhelper.check_balance.CheckBalanceActivity"
+            android:exported="true" />
+
+        <service
+            android:name="id.co.payment2go.terminalsdkhelper.payment_service.PaymentService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="connectedDevice">
+            <intent-filter>
+                <action android:name="com.example.paymentservice.START_PAYMENT_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".PaymentBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.paymentservice.RESPONSE_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.zcs.sdk.pin.pinpad.PinPadPasswordActivity"
+            android:theme="@style/Theme.WindowActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,139 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'id.co.payment2go.terminalsdkhelper'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 21
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+
+        coreLibraryDesugaringEnabled true
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    buildFeatures {
+        compose true
+        aidl true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.7'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/aidl']
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.4'
+    api 'androidx.activity:activity-compose:1.7.2'
+    api 'androidx.compose.ui:ui'
+    api 'androidx.compose.ui:ui-graphics'
+    api 'androidx.compose.ui:ui-tooling-preview'
+    api 'androidx.compose.material3:material3'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    api platform('androidx.compose:compose-bom:2023.03.00')
+
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation platform('androidx.compose:compose-bom:2023.03.00')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    androidTestImplementation platform('androidx.compose:compose-bom:2023.03.00')
+    androidTestImplementation platform('androidx.compose:compose-bom:2023.03.00')
+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
+
+    // coil for compose
+    api 'io.coil-kt:coil-compose:2.3.0'
+    api("io.coil-kt:coil-gif:2.4.0")
+
+    // Navigation
+    api 'androidx.navigation:navigation-compose:2.6.0'
+
+    // Accompanist
+    api "com.google.accompanist:accompanist-systemuicontroller:0.31.1-alpha"
+
+    // Retrofit
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    api 'com.google.code.gson:gson:2.10.1'
+    api(platform("com.squareup.okhttp3:okhttp-bom:4.10.0"))
+    api("com.squareup.okhttp3:okhttp")
+    api("com.squareup.okhttp3:logging-interceptor")
+
+    // Dagger Hilt
+    implementation("com.google.dagger:hilt-android:2.45")
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+    kapt("com.google.dagger:hilt-android-compiler:2.45")
+
+    // Ingenico SDK
+    implementation files('libs/usdk_api_aidl_v13.0.0.20200814.jar')
+    implementation files('libs/usdk_api_aidl_limited_v1.0.0.20200814.jar')
+    implementation files('libs/usdk_api_aidl_extension_v2.0.0.20200814.jar')
+
+    // Sunmi SDK
+    implementation files('libs/PayLib-release-1.4.72.jar')
+    implementation 'com.sunmi:printerlibrary:1.0.19'
+    // ZCS SDK
+    implementation files('libs/SmartPos_1.7.8_R231123.jar')
+    implementation 'com.google.zxing:core:3.5.0'
+    // SZZT SDK
+    implementation files('libs/szztdevicesdk_v4.0.5.jar')
+    implementation files('libs/ZtApiManager.jar')
+
+    //TOPWISE SDK
+    implementation files("libs/TOP_WISE_T1_V2_20221217.jar")
+    implementation files("libs/TopTool_V2_0_2.jar")
+
+
+    def room_version = "2.5.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+}
+
+kapt {
+    correctErrorTypes true
+}
+

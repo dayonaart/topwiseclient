@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="com.sunmi.perm.MSR" />
+    <uses-permission android:name="com.sunmi.perm.ICC" />
+    <uses-permission android:name="com.sunmi.perm.CONTACTLESS_CARD" />
+    <uses-permission android:name="com.sunmi.perm.PINPAD" />
+    <uses-permission android:name="com.sunmi.perm.SECURITY" />
+
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.ACCESS_CPOSSYSTEM" />
+    <uses-permission android:name="android.permission.ACCESS_HWSECURITYMANAGER" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORKMANAGER" />
+    <uses-permission android:name="android.permission.CLOUDPOS_SHUTDOWN" />
+    <uses-permission android:name="android.permission.CLOUDPOS_SLEEP" />
+    <uses-permission android:name="android.permission.CLOUDPOS_INSTALL_SILENCE" />
+    <uses-permission android:name="android.permission.CLOUDPOS_UNINSTALL_SILENCE" />
+    <uses-permission android:name="android.permission.CLOUDPOS_REBOOT" />
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEM_DISABLE_HARDWARE" />
+    <uses-permission android:name="android.permission.ADMIN_PWD_MODIFY" />
+    <uses-permission android:name="android.permission.ADMIN_PWD_RESET" />
+    <uses-permission android:name="android.permission.ADMIN_PWD" />
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEM_SETTIME" />
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEM_GETCPOSDEVICEINFO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WIZARPOS_SAFE_MODULE_READONLY" />
+    <uses-permission android:name="android.permission.CLOUDPOS_SAFE_MODULE_READONLY" />
+    <uses-permission android:name="android.permission.CLOUDPOS_MSR" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PRINTER" />
+    <uses-permission android:name="android.permission.CLOUDPOS_CONTACTLESS_CARD" />
+    <uses-permission android:name="android.permission.CLOUDPOS_SMARTCARD" />
+    <uses-permission android:name="android.permission.CLOUDPOS_SERIAL" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_GET_PIN_BLOCK" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_MAC" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_ENCRYPT_DATA" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_UPDATA_USER_KEY" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_UPDATE_MASTER_KEY" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_UPDATE_USER_KEY" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CLOUDPOS_BEEP" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CLOUDPOS_CUSTOMER_DISPLAY" />
+    <uses-permission android:name="android.permission.WIZARPOS_CUSTOMER_DISPLAY" />
+    <uses-permission android:name="android.permission.KOOLCLOUD_CUSTOMER_DISPLAY" />
+    <!-- 条码 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_BARCODE" />
+    <!-- 身份证识别权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_IDCARD" />
+
+    <uses-permission android:name="android.permission.CLOUDPOS_GET_DEVICE_INFO" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <!--  Top Wise  -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_PIN_BLOCK" /> <!-- 4、密码键盘计算Mac权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_PIN_MAC" /> <!-- 5、密码键盘加密数据权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_ENCRYPT_DATA" /> <!-- 6、密码键盘更新终端主密钥权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_UPDATE_MKEY" /> <!-- 7、密码键盘更新⼯作密钥权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_UPDATE_WKEY" /> <!-- 8、访问接触式IC卡读卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_ICCARD" /> <!-- 9、访问EMV权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_EMVL2" /> <!-- 10、访问⾮接触IC卡读卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_RFCARD" /> <!-- 11、访问磁条卡读卡器设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MAGCARD" /> <!-- 12、获取磁道明⽂接⼜权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MAGCARD_GETTRACKDATA" /> <!-- 13、获取磁道密⽂数据接⼜权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MAGCARD_GETENCRYPTTRACKDATA" /> <!-- 14、访问PSAM卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PSAMCARD" /> <!-- 15、访问串⼜设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SERIALPORT" /> <!-- 16、访问系统设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV" /> <!-- 17、设置系统时钟权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV_ALARM" /> <!-- 18、访问静默安装权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV_INSTALL" /> <!-- 19、更新终端OS、驱动权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV_OS_UPDATE" /> <!-- 20、ShellMonitor权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SHELLMONITORDEV" /> <!-- 21、接触式CPUCard读卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_CPUCARD" /> <!-- 22、收银机设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_CASHER" />
+
+</manifest>

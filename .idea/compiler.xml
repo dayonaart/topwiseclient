@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="17">
+      <module name="Terminal_SDK_Helper.app" target="17" />
+      <module name="Terminal_SDK_Helper.terminal-sdk-helper" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
