@@ -48,8 +48,8 @@ class MainViewModel @Inject constructor(
     //    38343342323144353639304545434330
     private val TAG = "MainViewModel"
     var masterKeyController by mutableStateOf("484455B474A6C6115FF62236D8A09C74")
-    var tdkKeyController by mutableStateOf("")
-    var pinKeyController by mutableStateOf("")
+    var pinKeyController by mutableStateOf("1BD91034012DA586A5DC462E62CEE475")
+    var tdkKeyController by mutableStateOf("1BD91034012DA586A5DC462E62CEE475")
     var encryptController by mutableStateOf(Properties.printText)
     var decryptController by mutableStateOf("")
     var injectResultMessage by mutableStateOf("")
